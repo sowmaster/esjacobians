@@ -3,67 +3,6 @@ import torch.nn as nn
 import torch.nn.functional as F
 
 
-def OmniglotNetFeats(hidden_size):
-    def conv_layer(ic, oc, ):
-        return nn.Sequential(
-            nn.Conv2d(ic, oc, 3, padding=1), nn.ReLU(inplace=True), nn.MaxPool2d(2),
-            nn.BatchNorm2d(oc, momentum=1., affine=True,
-                           track_running_stats=True
-                           )
-        )
-
-    net =  nn.Sequential(
-        conv_layer(1, hidden_size),
-        conv_layer(hidden_size, hidden_size),
-        conv_layer(hidden_size, hidden_size),
-        conv_layer(hidden_size, hidden_size),
-        nn.Flatten())
-
-    #initialize(net)
-    return net
-
-
-def MiniimageNetFeats(hidden_size):
-    def conv_layer(ic, oc):
-        return nn.Sequential(
-            nn.Conv2d(ic, oc, 3, padding=1), nn.ReLU(inplace=True), nn.MaxPool2d(2),
-            nn.BatchNorm2d(oc, momentum=1., affine=True,
-                           track_running_stats=False
-                           )
-        )
-
-    net = nn.Sequential(
-        conv_layer(3, hidden_size),
-        conv_layer(hidden_size, hidden_size),
-        conv_layer(hidden_size, hidden_size),
-        conv_layer(hidden_size, hidden_size),
-        nn.Flatten())
-
-    #initialize(net)
-    return net
-
-
-# def initialize(net):
-#     # initialize weights properly
-#     for m in net.modules():
-#         if isinstance(m, nn.Conv2d):
-#             n = m.kernel_size[0] * m.kernel_size[1] * m.out_channels
-#             m.weight.data.normal_(0, math.sqrt(2. / n))
-#             if m.bias is not None:
-#                 m.bias.data.zero_()
-#         elif isinstance(m, nn.BatchNorm2d):
-#             m.weight.data.fill_(1)
-#             m.bias.data.zero_()
-#         elif isinstance(m, nn.Linear):
-#             #m.weight.data.normal_(0, 0.01)
-#             #m.bias.data = torch.ones(m.bias.data.size())
-#             m.weight.data.zero_()
-#             m.bias.data.zero_()
-#
-#     return net
-
-
-
 class classifier(nn.Module):
 
     def __init__(self, n_features=84, n_classes=10):
@@ -203,6 +142,45 @@ class LeNet5Half(nn.Module):
             return output
         else:
             return output, feature
+
+def OmniglotNetFeats(hidden_size):
+    def conv_layer(ic, oc, ):
+        return nn.Sequential(
+            nn.Conv2d(ic, oc, 3, padding=1), nn.ReLU(inplace=True), nn.MaxPool2d(2),
+            nn.BatchNorm2d(oc, momentum=1., affine=True,
+                           track_running_stats=True
+                           )
+        )
+
+    net =  nn.Sequential(
+        conv_layer(1, hidden_size),
+        conv_layer(hidden_size, hidden_size),
+        conv_layer(hidden_size, hidden_size),
+        conv_layer(hidden_size, hidden_size),
+        nn.Flatten())
+
+    #initialize(net)
+    return net
+
+
+def MiniimageNetFeats(hidden_size):
+    def conv_layer(ic, oc):
+        return nn.Sequential(
+            nn.Conv2d(ic, oc, 3, padding=1), nn.ReLU(inplace=True), nn.MaxPool2d(2),
+            nn.BatchNorm2d(oc, momentum=1., affine=True,
+                           track_running_stats=False
+                           )
+        )
+
+    net = nn.Sequential(
+        conv_layer(3, hidden_size),
+        conv_layer(hidden_size, hidden_size),
+        conv_layer(hidden_size, hidden_size),
+        conv_layer(hidden_size, hidden_size),
+        nn.Flatten())
+
+    #initialize(net)
+    return net
 
 
 ############ VGG networks #################

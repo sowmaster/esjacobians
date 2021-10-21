@@ -1,5 +1,5 @@
 
-# Simple adaptation of the Resnet12 from learn2learn to output features vector
+# Simple adaptation of the Resnet12 from learn2learn to output features vector instead of classification logits 
 
 import torch
 import torch.nn as nn
@@ -263,7 +263,6 @@ class ResNet12(nn.Module):
             l2l.nn.Flatten(),
             self.dropout,
         )
-        #self.classifier = torch.nn.Linear(hidden_size, output_size)
 
     def _make_layer(
         self,

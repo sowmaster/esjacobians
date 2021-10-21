@@ -1,3 +1,4 @@
+# implementation of some standard CNNs 
 
 import torch.nn as nn
 import torch.nn.functional as F

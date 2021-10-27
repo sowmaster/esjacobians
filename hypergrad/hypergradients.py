@@ -34,7 +34,7 @@ def hgvesj(params,
 
     """
 
-    params = [w.detach().requires_grad_(True) for w in params]  # detach it cuz we dont need the graph used to compute param w anymore
+    params = [w.detach().requires_grad_(True) for w in params]  
     if more:
         # o_loss, acc = outer_loss(params, hparams, verbose=True, more=more)
         o_loss, acc = outer_loss(params, hparams, more=more)
@@ -280,7 +280,7 @@ def fixed_point(params: List[Tensor],
         the list of hypergradients for each element in hparams
     """
 
-    params = [w.detach().requires_grad_(True) for w in params] # detach it cuz we dont need the graph used to compute param w anymore
+    params = [w.detach().requires_grad_(True) for w in params] 
     # o_loss = outer_loss(params, hparams)
 
     if more:

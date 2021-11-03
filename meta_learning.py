@@ -1,5 +1,5 @@
 """
-Few-shot meta-learning on mini-imagenet dataset
+Few-shot meta-learning with adaptation over partial parameters 
 """
 import math
 import argparse

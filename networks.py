@@ -1,4 +1,4 @@
-# implementation of some standard CNNs 
+# implementation of some standard vision networks 
 
 import torch.nn as nn
 import torch.nn.functional as F

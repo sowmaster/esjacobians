@@ -44,7 +44,6 @@ def init_params(net):
                 init.constant(m.bias, 0)
 
 
-# Jacobian function by PyTorch author
 def jacobian(y, x, create_graph=False):
     jac = []
     flat_y = y.reshape(-1)

@@ -246,11 +246,6 @@ for step in range(1, steps+1):
     #     lr = 0.005
     #     for param_group in outer_opt.param_groups:
     #         param_group['lr'] = lr
-    #
-    # if step == 40000 and args.dataset == 'cifar10':
-    #     lr = 0.0005
-    #     for param_group in outer_opt.param_groups:
-    #         param_group['lr'] = lr
 
 print('Ended in {:.2e} seconds\n'.format(total_time))
 

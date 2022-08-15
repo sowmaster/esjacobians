@@ -4,4 +4,4 @@ Implementations of the algorithms described in the paper [**ES-based Jacobian En
 This repository is built on [hypertorch](https://github.com/prolearner/hypertorch). 
 You can get started with the simple examples in IPython notebooks HyperRepresentation.ipynb and DeepHyperRepresentation.ipynb. 
 
-This repo is under construction. More is coming soon! 
+This repo is under construction. 

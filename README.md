@@ -1,7 +1,7 @@
 # Partial Zeroth-Order based Bilevel Optimizers
 Implementations of the algorithms described in the NeurIPS 22 paper [**On the Convergence Theory for Hessian-Free Bilevel Algorithms**](https://arxiv.org/abs/2110.07004). 
 
-**Authors** 
+## Authors
 
 Daouda Sow, Kaiyi Ji, and Yingbin Liang
 
@@ -10,7 +10,7 @@ You can get started with the simple examples in IPython notebooks HyperRepresent
 
 Appropriate datasets will be downloaded and put into `data` folder. 
 
-**Examples**
+## Examples
 
 To run the deep hyper-representation experiment with PZOBO-S algorithm on the MNIST dataset, please run the following command: 
 ```
@@ -22,6 +22,7 @@ python meta_learning.py --dataset miniimagenet
 ```
 Other supported dataset for few-shot meta-learning are Omniglot and FC100. Please, check the file `meta-learning.py` for other command-line arguments that can be set. 
 
+# Cite 
 If you use this code in your research, please cite the following papers: 
 ```
 @article{sow2021based,

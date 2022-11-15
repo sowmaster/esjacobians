@@ -2,6 +2,7 @@
 Implementations of the algorithms described in the NeurIPS 22 paper [**On the Convergence Theory for Hessian-Free Bilevel Algorithms**](https://arxiv.org/abs/2110.07004). 
 
 **Authors** 
+
 Daouda Sow, Kaiyi Ji, and Yingbin Liang
 
 This repository is built on [hypertorch](https://github.com/prolearner/hypertorch). 
@@ -15,12 +16,29 @@ To run the deep hyper-representation experiment with PZOBO-S algorithm on the MN
 ```
 python bilevel_training_mnist.py --dataset MNIST 
 ```
-To run few-shot meta-learning experiment with PZOBO algorithm on the omniglot dataset, please run the following command: 
+To run few-shot meta-learning experiment with PZOBO algorithm on the MiniImageNet dataset, please run the following command: 
 ```
-python meta_learning.py --dataset miniimagenet
+python meta_learning.py --dataset miniimagenet 
 ```
 Other supported dataset for few-shot meta-learning are Omniglot and FC100. Please, check the file `meta-learning.py` for other command-line arguments that can be set. 
 
 If you use this code in your research, please cite the following papers: 
+```
+@article{sow2021based,
+  title={Es-based jacobian enables faster bilevel optimization},
+  author={Sow, Daouda and Ji, Kaiyi and Liang, Yingbin},
+  journal={arXiv preprint arXiv:2110.07004},
+  year={2021}
+}
+```
+```
+@inproceedings{grazzi2020iteration,
+  title={On the Iteration Complexity of Hypergradient Computation},
+  author={Grazzi, Riccardo and Franceschi, Luca and Pontil, Massimiliano and Salzo, Saverio},
+  journal={Thirty-seventh International Conference on Machine Learning (ICML)},
+  year={2020}
+}
+```
+
 
 

@@ -3,7 +3,9 @@ Implementations of the algorithms described in the NeurIPS 22 paper [**On the Co
 
 ## Authors
 
-Daouda Sow, Kaiyi Ji, and Yingbin Liang
+Daouda Sow, Kaiyi Ji, and Yingbin Liang. 
+
+## Quickstart
 
 This repository is built on [hypertorch](https://github.com/prolearner/hypertorch). 
 You can get started with the simple examples in IPython notebooks HyperRepresentation.ipynb and DeepHyperRepresentation.ipynb. 

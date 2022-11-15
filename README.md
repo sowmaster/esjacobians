@@ -25,7 +25,7 @@ python meta_learning.py --dataset miniimagenet
 Other supported dataset for few-shot meta-learning are Omniglot and FC100. Please, check the file `meta-learning.py` for other command-line arguments that can be set. 
 
 ## Cite 
-If you use this code in your research, please cite the following papers: 
+If you use this code is useful for your research, please cite the following papers: 
 ```
 @article{sow2021based,
   title={Es-based jacobian enables faster bilevel optimization},

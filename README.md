@@ -3,7 +3,7 @@ Implementations of the algorithms described in the NeurIPS 22 paper [**On the Co
 
 ## Authors
 
-Daouda Sow, Kaiyi Ji, and Yingbin Liang. 
+Daouda Sow, Kaiyi Ji, and Yingbin Liang 
 
 ## Quickstart
 

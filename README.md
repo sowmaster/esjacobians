@@ -5,7 +5,9 @@ This repository is built on [hypertorch](https://github.com/prolearner/hypertorc
 You can get started with the simple examples in IPython notebooks HyperRepresentation.ipynb and DeepHyperRepresentation.ipynb. 
 
 Appropriate datasets will be downloaded and put into `data` folder. 
+
 Examples:
+
 To run the deep hyper-representation experiment with PZOBO-S algorithm on the MNIST dataset, please run the following command: 
 ```
 python bilevel_training_mnist.py --dataset MNIST 

@@ -27,11 +27,13 @@ Other supported dataset for few-shot meta-learning are Omniglot and FC100. Pleas
 ## Cite 
 If this code is useful for your research, please cite the following papers: 
 ```
-@article{sow2021based,
-  title={Es-based jacobian enables faster bilevel optimization},
+@article{sow2022convergence,
+  title={On the convergence theory for hessian-free bilevel algorithms},
   author={Sow, Daouda and Ji, Kaiyi and Liang, Yingbin},
-  journal={arXiv preprint arXiv:2110.07004},
-  year={2021}
+  journal={Advances in Neural Information Processing Systems},
+  volume={35},
+  pages={4136--4149},
+  year={2022}
 }
 ```
 ```
